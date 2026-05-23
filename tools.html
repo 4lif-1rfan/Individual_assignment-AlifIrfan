@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit Converter</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="w3-bar w3-black">
+	  <a href="PersonalInfo.html" class="w3-bar-item w3-button">About Me</a>
+	  <a href="tools.html" class="w3-bar-item w3-button w3-theme-d5">Unit Converter</a>
+	</div>
+    <div class="w3-container item">
+	  <br>
+      <input class="w3-input" type="number" id="input"><br>
+	  <button onclick="cm_m()" class="w3-button w3-round-large w3-border w3-border-black conv w3-gray">centimeter to meter</button>
+	  <button onclick="m_cm()" class="w3-button w3-round-large w3-border w3-border-black conv w3-gray">meter to centimeter</button>
+	  <button onclick="m_km()" class="w3-button w3-round-large w3-border w3-border-black conv w3-gray">meter to kilometer</button>
+	  <button onclick="km_m()" class="w3-button w3-round-large w3-border w3-border-black conv w3-gray">kilometer to meter</button>
+	  <p id="output">Output : </p>
+	</div>
+	<script>
+	  let inp = 0;
+	  let result = 0;
+	  function setInput(){
+	    inp = parseInt(document.getElementById("input").value);
+	  }
+	  function cm_m(){
+	    setInput();
+	    result = inp / 100;
+	    document.getElementById("output").innerHTML = "Output : " + result.toString();
+	  }
+	  function m_cm(){
+	    setInput();
+	    result = inp * 100;
+	    document.getElementById("output").innerHTML = "Output : " + result.toString();
+	  }
+	  function m_km(){
+	    setInput();
+	    result = inp / 1000;
+	    document.getElementById("output").innerHTML = "Output : " + result.toString();
+	  }
+	  function km_m(){
+	    setInput();
+	    result = inp * 1000;
+	    document.getElementById("output").innerHTML = "Output : " + result.toString();
+	  }
+	</script>
+  </body>
+</html>
